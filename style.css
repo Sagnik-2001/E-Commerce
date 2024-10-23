@@ -1,0 +1,289 @@
+/* Universal styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    font-family: 'Arial', sans-serif; /* Consistent typography */
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #222; /* Darker background for a sleek look */
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: navbarFadeIn 1s ease-in-out;
+}
+
+
+#it{
+    color: #f1f4f5;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    position: relative; */
+}
+
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333; /* Background matches the navbar */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Dropdown shadow */
+    z-index: 1; /* Ensure it's above other elements */
+    list-style: none;
+}
+
+/* Dropdown menu items */
+.dropdown-content li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content li a:hover {
+    background-color: #575757; /* Lighten the background on hover */
+}
+
+/* Fade-in animation for navbar */
+@keyframes navbarFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo img {
+    width: 110px;
+    height: 90px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar links */
+.navlinks {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: 200px;
+}
+
+.navlinks li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for navbar links */
+.navlinks li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #00d1b2; /* Turquoise underline on hover */
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.navlinks li a:hover::after {
+    width: 100%;
+}
+
+.navlinks li a:hover {
+    color: #00d1b2; /* Change text color on hover */
+}
+
+/* Search bar styling */
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 550px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-right: -100px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.searchbar:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Search input styling */
+.searchbar input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding: 0 15px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 25px;
+    color: #333;
+}
+
+.searchbar .icon {
+    color: #666;
+    font-size: 22px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.searchbar a:hover .icon {
+    color: #00d1b2; /* Icon color changes to match hover color scheme */
+}
+
+/* Heading styling */
+#h {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b); /* Vibrant gradient background */
+    margin-top: 15px;
+    text-align: center;
+    font-size: 50px;
+    color: #f3f3f3;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    animation: textSlide 1.5s ease-in-out;
+}
+
+/* Slide-in animation for heading */
+@keyframes textSlide {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+span {
+    font-size: 80px;
+    color: #f39c12; /* Warm golden color */
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease-in-out;
+}
+
+span:hover {
+    color: #e74c3c; /* Interactive hover for heading text */
+}
+
+/* Category and sale items */
+.category_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    animation: fadeIn 1.2s ease-in-out;
+    padding: 30px 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sale_item {
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.sale_item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Footer styling */
+.footer_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 220px;
+    width: 100%;
+    background-color: #222; /* Match with navbar for consistency */
+    animation: footerSlide 1.5s ease-in-out;
+    padding: 30px 0;
+}
+
+@keyframes footerSlide {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer div a{
+    text-decoration: none
+}
+h3 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #00d1b2;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer_column a h4:hover{
+    color: #00d1b2;
+}
+h3:hover {
+    transform: scale(1.1);
+}
+
+h4 {
+    font-size: 18px;
+    color: #f3f3f3;
+    padding-top: 2px;
+}
+
+/* Placeholder styling */
+::placeholder {
+    color: #7d8803;
+    font-style: italic;
+}
